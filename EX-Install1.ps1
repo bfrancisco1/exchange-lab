@@ -9,3 +9,6 @@ Install-WindowsFeature AS-HTTP-Activation, Desktop-Experience, NET-Framework-45-
 #run from exchange disc Setup.exe /mode:Install /role:ClientAccess,Mailbox /MdbName:GeneralStore /DbFilePath:X:\Exchange\database\GeneralStore.edb /LogFolderPath:X:\Exchange\logs /IAcceptExchangeServerLicenseTerms
 
 New-ExchangeCertificate -FriendlyName "corp Certificate" -DomainName autodiscover.corp.francisco.science,owa.corp.francisco.science,mail.corp.francisco.science -GenerateRequest -PrivateKeyExportable $true -KeySize 2048 -RequestFile "c:\DomainCSRRequest.csr"
+#submit to http://dc01/certsrv
+#download in der format
+Import-ExchangeCertificate -filename c:\cert.cert
