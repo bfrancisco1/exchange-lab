@@ -18,4 +18,18 @@ Add-WindowsFeature Adcs-Web-Enrollment -IncludeAllSubFeature -IncludeManagementT
 ##select CA name
 ##windows type authentication
 ##built-in identity pool
-##use default SSL cert (this is the root cert for the root CA)
+##use default SSL cert (this is the root cert for the root CA )
+
+#configure user cert
+#go to CA console
+#duplicate user certificate template
+#Go to the general tab
+#Update name
+#Go to Security tab
+#For domain users, make sure Enroll and Autoenrol is allowed
+#Hit ok
+#Back at the CA console
+#Right click Ceriticate Templates
+#Select new certificate template to issue
+#
+#Create PKI gpo to apply to users
