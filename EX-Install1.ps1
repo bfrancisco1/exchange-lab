@@ -12,3 +12,5 @@ New-ExchangeCertificate -FriendlyName "corp Certificate" -DomainName autodiscove
 #submit to http://dc01/certsrv
 #download in der format
 Import-ExchangeCertificate -filename c:\cert.cert
+#then assign new certificate to iis
+Enable-ExchangeCertificate <thumbprint> -Server ex01 –Services IIS
