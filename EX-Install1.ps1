@@ -14,3 +14,6 @@ New-ExchangeCertificate -FriendlyName "corp Certificate" -DomainName autodiscove
 Import-ExchangeCertificate -filename c:\cert.cert
 #then assign new certificate to iis
 Enable-ExchangeCertificate <thumbprint> -Server ex01 –Services IIS
+#update external url for all
+#add mail dns entry for internal DNS
+#configure server from EAC to use appropriate nic for external/internal
