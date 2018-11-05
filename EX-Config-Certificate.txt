@@ -11,4 +11,6 @@
 ##Go to Authentication
 ##Change "Active Directory Client Certificate Authentication" status to enabled
 #In EAC, update virtual directory to accept client certificates
-#
+
+
+#Client certificate must be exported from local cert store on workstation since the private key is not stored in AD
