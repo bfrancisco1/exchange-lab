@@ -1,0 +1,14 @@
+#copy cert to file
+#Enable IIS Client Certificate mapping on exchange
+##located under Roles > Web Server > Security > IIS Client Services
+#enable Certificate logon method
+##IIS > Default Web Site > Microsoft-Server-ActiveSync
+##Double click Configuration Editor
+##Go to system.webserver/Security/Authentcation/iisclientcertificatemapping
+##Change enable to true
+#enable client cert response type in IIS
+##go to Server name in IIS
+##Go to Authentication
+##Change "Active Directory Client Certificate Authentication" status to enabled
+#In EAC, update virtual directory to accept client certificates
+#
